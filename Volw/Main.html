@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Valley of warrior</title>
+    <link rel="shortcut icon" href="css/Images/Other/icon_site.png" />
+    <!-- Bootstrap -->
+    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap/jquery.fancybox.css" rel="stylesheet">
+    <link href="libs/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="libs/font-awesome-4.6.3/css/fonts.css" rel="stylesheet">
+    <link href="libs/media/media.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>  
+    <!-- Шапка --> 
+    <header>
+     <div class="container">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="User_info">
+              <a href="#" class="us_info">User Nickname</a>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7">
+          <div id="Logo">Valley of Warrior</div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-xs-1">
+          <a href="#"><div class="Exit">Exit</div></a> 
+        </div>
+      </div>
+    </header>
+    <!--Контент-->
+    <div class="content">
+      <div class="col-md-12">
+        <div class="Game"><canvas id="CVS"></canvas>
+        <div class="col-md-3">
+          <div id="main_menu">
+            <!--1--><button id="NewGame" onclick="GameMenu(1)">New Game</button>
+            <!--2--><button id="BacktoGame" onclick="GameMenu(2)"> Back to Game</button>
+            <!--1--><button id="Continue" onclick="GameMenu(3)">Continue</button>
+            <button id="Saves" onclick="GameMenu(4)">Saves</button>
+            <button id="Options" onclick="GameMenu(5)">Options</button>
+            <!--2--><button id="Exittomenu" onclick="GameMenu(6)">Main Menu</button>
+            <!--1--><button id="Exit" onclick="GameMenu(7)">Exit</button>
+          </div>
+        </div>
+          <div class="col-md-7"><div id="options"></div></div>
+        </div> 
+      </div>
+    </div>
+    <!--Подвал-->
+    <footer>
+    </footer>
+    <div id="resources">
+      <!--grounds-->
+      <img id="Hero" src="css/Images/Hero/Hero.png" alt="/">
+      <img id="Hero1" src="css/Images/Hero/Hero1.png" alt="/">
+      <!--builds-->
+      <img id="houseMedium" src="css/Images/Builds/houseNormal.png" alt="/">
+      <img id="tilesBCG" src="css/Images/Backgrounds/tilesBCG.png" alt="/">
+      <!--weapons-->
+      <img id="sword1" src="css/Images/Items/sword.png" alt="/">
+    </div>
+    <!-- jQuery (JavaScript plugins) -->
+    <script src="libs/jquery/jquery-3.1.1.js"></script>
+    <script src="libs/bootstrap-js/bootstrap.min.js"></script>
+	  <script src="libs/bootstrap-js/jquery.fancybox.pack.js"></script>
+    <script src="js/design.js"></script>
+    <script src="js/Maps.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/Move.js"></script>
+    <script src="js/collisions.js"></script>
+    <script src="js/Building.js"></script>
+    <script src="js/attack.js"></script>
+    <script src="js/main-function.js"></script>
+  </body>
+</html>

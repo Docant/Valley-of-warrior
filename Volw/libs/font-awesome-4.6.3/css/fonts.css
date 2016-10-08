@@ -1,0 +1,121 @@
+/*Удобный сайт со шрифтами: http://fonts4web.ru/ */
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"Minecraft";
+    src: url("../fonts/minecraft/Minecraft.eot");
+    src: url("../fonts/minecraft/Minecraft.svg#Minecraft")format("svg"),
+    url("../fonts/minecraft/Minecraft.woff") format("woff"),
+    url("../fonts/minecraft/Minecraft.ttf") format("truetype");
+font-weight:normal;
+font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"CerealboxRegular";
+    src:url("../fonts/Game/cerealbox.eot?") format("eot"),
+    url("../fonts/Game/cerealbox.woff") format("woff"),
+    url("../fonts/Game/cerealbox.ttf") format("truetype"),
+    url("../fonts/Game/cerealbox.svg#Cerealbox") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"Zealot";
+    src:url("../fonts/Zealot/zealot.eot?") format("eot"),
+    url("../fonts/Zealot/zealot.woff") format("woff"),
+    url("../fonts/Zealot/zealot.ttf") format("truetype"),
+    url("../fonts/Zealot/zealot.svg#Zealot") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"FaithCollapsing";
+    src:url("../fonts/Faith/Faith_Collapsing.eot?") format("eot"),
+    url("../fonts/Faith/Faith_Collapsing.woff") format("woff"),
+    url("../fonts/Faith/Faith_Collapsing.ttf") format("truetype"),
+    url("../fonts/Faith/Faith_Collapsing.svg#FaithCollapsing") 
+    format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {font-family:"BloodCrow";
+    src:url("../fonts/bloodcrow/bloodcrow.eot?") format("eot"),
+    url("../fonts/bloodcrow/bloodcrow.woff") format("woff"),
+    url("../fonts/bloodcrow/bloodcrow.ttf") format("truetype"),
+    url("../fonts/bloodcrow/bloodcrow.svg#BloodCrow") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+    font-family:"CaribbeanRegular";
+    src:url("../fonts/Caribbean/Caribbean.eot?") format("eot"),
+    url("../fonts/Caribbean/Caribbean.woff") format("woff"),
+    url("../fonts/Caribbean/Caribbean.ttf") format("truetype"),
+    url("../fonts/Caribbean/Caribbean.svg#Caribbean-Regular") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+    src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+    url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUIBold"; */
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUIItalic"; */
+@font-face {
+    font-family: "SegoeUIItalic";
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUILight"; */
+@font-face {
+    font-family: "SegoeUILight";
+    src: url("../fonts/SegoeUILight/SegoeUILight.eot");
+    src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+    url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUISemiBold"; */
+@font-face {
+    font-family: "SegoeUISemiBold";
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+

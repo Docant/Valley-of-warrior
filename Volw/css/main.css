@@ -1,0 +1,125 @@
+/*`````````````````CSS```````````````````*/
+
+#resources{
+    display: none;
+}
+
+body{
+    background: url(Images/Backgrounds/BG.jpg) no-repeat;
+    background-size: 100%;
+}
+
+/*--------------------CANVAS--------------------*/
+.Game{
+    border: 3px solid black; 
+    border-radius: 3px;
+    width: 1850px;
+    height: 900px;
+    margin: 0 auto 0;
+    margin-top: 1%;
+    background: url(Images/Backgrounds/BG.jpg)no-repeat;
+    background-size: 100%;
+    box-shadow: 0px 0px 75px -5px rgba(0,0,0,0.75);
+}
+
+#CVS{ 
+    display: none; 
+    margin: 0 auto;
+    background: url(Images/Backgrounds/BGOut.png);
+}
+
+/*------------------------------Меню в игре------------------------------*/
+
+#main_menu{
+    font-family: "CaribbeanRegular";
+    font-size: 25px;
+    color: #D4B2AE;
+    margin: 8% 10% 0;
+}
+
+#main_menu button{
+    display: block;
+    width: 100%;
+    height: 85px;
+    text-align: left;
+    margin: 23% 0 0;
+    padding-left: 25px;
+    border: none;
+    background: url(Images/Other/menu.png)no-repeat;
+}
+
+#main_menu #BacktoGame{
+    display: none;
+}
+#main_menu #Exittomenu{
+    display: none;
+}
+
+#main_menu button:hover{
+    color: #AFC1DB;
+}
+
+#main_menu button:focus{
+    outline: none;
+}
+
+/*----------------------------Options----------------------------*/
+
+#options{
+    display: none;
+    font-size: 30px;
+    width: 100%;
+    height: 700px;
+    margin: 8% 25% 0;
+    background: url(Images/Other/option.png)no-repeat;
+    background-size: 100%;
+    color: #fff;
+    padding: 5px 15px 0;
+}
+
+/*------------------------------Head------------------------------*/
+
+header{
+    border: 4px solid #421300;
+    height: 55px;
+    background: #050505;
+    box-shadow: 0px 2px 30px 3px rgba(0,0,0,0.75);
+    font-size: 25px;
+    font-family: "SegoeUIRegular";
+}
+
+#Logo{
+    font-family: "BloodCrow";
+    color: #E3D3D1;
+    font-size: 40px;
+    padding-left: 6%;
+    margin-top: -1%;
+}
+
+#Logo:hover{
+    color: #AFC1DB;
+    cursor: pointer
+}
+
+.container{
+    padding: 8px 0 0;
+}
+
+.container a{
+    color: #fff;
+    text-decoration: none;   
+}
+
+.container a:focus{
+    color: #fff;
+    text-decoration: none;   
+}
+
+.container a:hover{
+    color: #B88C33;
+}
+
+
+.Exit:hover{
+    color: #a02e2e;
+}
