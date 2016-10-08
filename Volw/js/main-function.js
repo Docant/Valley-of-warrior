@@ -15,6 +15,10 @@ function draw() {
         ctx.drawImage(Hero.img, 27 * nframe, frposy, Hero.wid, Hero.hei, Hero.x, Hero.y, Hero.w, Hero.h);
         //Меч
         attacka();
+
+        //ctx.fillRect(NPC[0].x,NPC[0].y,NPC[0].w,NPC[0].h);
+        drawVil();
+        moveVil();
     }
 }
 

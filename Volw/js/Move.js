@@ -52,6 +52,7 @@ function Move(){
 			sidemove = "left";
 			moveframes()
 			frposy = 32;
+			Vil[0].x +=speed;
 		}else
         if(dPessed){
             // Hero.x +=speed; //d
@@ -59,6 +60,7 @@ function Move(){
 			sidemove = "right";
 			moveframes()
 			frposy = 64;
+			Vil[0].x -=speed;
         }else
         if(wPessed){
             // Hero.y -=speed;  //w
@@ -66,6 +68,7 @@ function Move(){
 			sidemove = "up";
 			moveframes()
 			frposy = 96;
+			Vil[0].y +=speed;
         }else
         if(sPessed){
            // Hero.y +=speed; //s
@@ -73,6 +76,7 @@ function Move(){
 			sidemove = "down";
 			moveframes()
 			frposy = 0;
+			Vil[0].y -=speed;
         }
 		// if(!wPessed && !sPessed && !aPessed && !dPessed){
 		// 	frposy = 130;
