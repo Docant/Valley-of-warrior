@@ -73,7 +73,7 @@ function Move(){
 			sidemove = "down";
 			moveframes()
 			frposy = 0;
-        }	
+        }
 		// if(!wPessed && !sPessed && !aPessed && !dPessed){
 		// 	frposy = 130;
 		// 	camera.y +=0;

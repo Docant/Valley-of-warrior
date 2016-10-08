@@ -40,17 +40,17 @@ function coll_Char(posX,posY,tSize, i,j){
 
 function coll_Cam(){
     //Ограничение по X
-	if(camera.x > (mapsize-x/2)-100) {
-   		camera.x = (mapsize - x/2)-100;
-	}else if(camera.x < 64-x/2){
-		camera.x = 64-x/2;
-	}
-    //Ограничение по Y
-	if(camera.y > (mapsize-y/2)-110){
-   		camera.y = (mapsize - y/2)-110;
-	}else if(camera.y < 64-y/2){
-		camera.y = 64-y/2;
-	}
+		if(camera.x > (mapsize-x/2)-100) {
+		 		camera.x = (mapsize - x/2)-100;
+		}else if(camera.x < 64-x/2){
+			camera.x = 64-x/2;
+		}
+		  //Ограничение по Y
+		if(camera.y > (mapsize-y/2)-110){
+		 		camera.y = (mapsize - y/2)-110;
+		}else if(camera.y < 64-y/2){
+			camera.y = 64-y/2;
+		}
 }
 
 
