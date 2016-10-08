@@ -36,8 +36,10 @@ var cursorx = 0;
 var cursory = 0; 
 //--Атака--
 var attack = false;
-
+var weaponry = false;
 var angle = 0;
+
+var swd = document.getElementById("sword1");
 
 //------------------Скорость------------------
 var speed = 4;
@@ -49,6 +51,7 @@ var nframe = 1;
 var frposy = 0;
 
 var sidemove = "down";
+
 //---------------Камера---------------------------
 var camera = {x: 0, y: 0};
 

@@ -1,4 +1,6 @@
 ﻿
+document.oncontextmenu = function (){return false};
+
 window.onmousemove = function(event){   //положение мыши
     cursorx = event.pageX;
     cursory = event.pageY;
@@ -8,20 +10,32 @@ window.onmousemove = function(event){   //положение мыши
 var sx = Hero.x + Hero.w/2;
 var sy = Hero.y + Hero.h/2;
 
-var swd = document.getElementById("sword1");
-// window.onclick = function(){   //клик мыши
-// 
-// };
-// 
-// ctx.onmousedown = function(){ //Нажал
-    //  
+onclick = function(){   //клик мыши
+        attack = true;
+        setTimeout(function(){attack = false;}, 200);
+};
+
+function attacka(){
+    if(attack){
+        sword(sx, sy, 100, 20, angle);
+    }else{
+        sword(sx, sy, 50, 10, angle);
+    }
+}
+
+canvas.oncontextmenu = function(e) {
+    if(!weaponry){weaponry=true;}else if(weaponry){weaponry=false;}
+};
+
+// ctx.onmousedown = function(e){ //Нажал
+     
 // };
 // 
 // ctx.onmouseup = function(){  //Отпустил
 // 
 // };
 
-var sword = function(sx,sy,w,h,a){
+function sword(sx,sy,widsw,heisw,a){
     var dx = sx;  
     var dy = sy;
 
@@ -33,7 +47,7 @@ var sword = function(sx,sy,w,h,a){
         ctx.rotate(angle);
         ctx.translate(-dx,-dy);
     }
-    ctx.drawImage(swd, sx,sy,w,h);
+    if(weaponry){ctx.drawImage(swd, sx,sy,widsw,heisw);}
     if(angle){
         ctx.restore();
     }

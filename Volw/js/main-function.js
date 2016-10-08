@@ -14,7 +14,7 @@ function draw() {
         //Отрисовка персонажа
         ctx.drawImage(Hero.img, 27 * nframe, frposy, Hero.wid, Hero.hei, Hero.x, Hero.y, Hero.w, Hero.h);
         //Меч
-        sword(sx, sy, 50, 10, angle);
+        attacka();
     }
 }
 
