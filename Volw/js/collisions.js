@@ -1,21 +1,21 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Collisions-JS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 function push(pforce){
-			if(sidemove == "right"){
-			  //Отталкиваение влево
-			  camera.x -=speed/pforce;
-			}if(sidemove == "left"){
-				//Отталкиваение вправо
-			  camera.x +=speed/pforce;
-			}
-			if(sidemove == "down"){
-			  //Отталкивание вверх
-			  camera.y -=speed/pforce;
-			
-			} if(sidemove == "up"){
-			  //Отталкиваение вниз
-			  camera.y +=speed/pforce;
-			}
+	if(sidemove == "right"){
+	  //Отталкиваение влево
+	  camera.x -=speed/pforce;
+	}if(sidemove == "left"){
+		//Отталкиваение вправо
+	  camera.x +=speed/pforce;
+	}
+	if(sidemove == "down"){
+	  //Отталкивание вверх
+	  camera.y -=speed/pforce;
+	
+	} if(sidemove == "up"){
+	  //Отталкиваение вниз
+	  camera.y +=speed/pforce;
+	}
 }
 
 //Коллизия
@@ -23,36 +23,17 @@ function coll_Char(posX,posY,tSize, i,j){
 
 	var CollX = false;
 	var CollY = false;
+
   		if ((Hero.x + Hero.w >= posX) && (Hero.x <= posX + tSize)){CollX = true;}
   		if ((Hero.y + Hero.h >= posY) && (Hero.y <= posY + tSize)){CollY = true;}  
 			  //alert(i,j);
   		if (CollX && CollY){
-			  //Для воды будет отталкивание в половину меньше, течение
-			// if(streetObjects[i][j] == 29){
+			  //Для воды будет отталкивание в половину меньше, течение)
+			// if(floor[i][j] == 29){
 			// 	push(2);
 			// }else
-		  	if(streetObjects[i][j] != 0 && streetObjects[i][j] != 48){
-					push(1);
-		  	}
-		  	if(streetObjects[i][j] == 48){
-					act(true);
-		  	}
-		}
-}
-//Коллизия с таверной
-function taverna_coll_Char(posX,posY,tSize, i,j){
-	
-	var CollX = false;
-	var CollY = false;
-  		if ((Hero.x + Hero.w >= posX) && (Hero.x <= posX + tSize)){CollX = true;}
-  		if ((Hero.y + Hero.h >= posY) && (Hero.y <= posY + tSize)){CollY = true;}  
-			 
-  		if (CollX && CollY){
-		  	if(taverna[i][j] != 47 && taverna[i][j] != 17){
-					push(1);
-		  	}
-				if(taverna[i][j] == 47){
-					act(false);
+		  	if(floor[i][j] != 0){
+				push(1);
 		  	}
 		}
 }

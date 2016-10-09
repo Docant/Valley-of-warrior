@@ -23,9 +23,6 @@
 		if(e.keyCode == 27 && inGame){
 			GameMenu(0);
 		}
-		if(e.keyCode == 69){
-			interact = true;
-		}
 	}
 	function keyUpHandler(e) {	 //Уравление кнопками
 		if(e.keyCode == 65) {
@@ -40,42 +37,55 @@
 		if(e.keyCode == 83) {
 			sPessed = false;    //s
 		}
-		if(e.keyCode == 69){
-			interact = false;
-		}
 	}   
 
 function moveframes(){
 	nframe+=1; 
-	if(nframe>=6){nframe=1}
+	if(nframe>=4){nframe=1}
 }
 
 //----------------------------------------------
 function Move(){
         if(aPessed){
-            // Hero.x -=speed; //a
-			camera.x -=speed;
+			camera.x -=speed;	//a
+			Vil[0].x +=speed;
+
+			saveVil();
+			moveVilX+=speed;
+
 			sidemove = "left";
 			moveframes()
 			frposy = 32;
 		}else
         if(dPessed){
-            // Hero.x +=speed; //d
-			camera.x +=speed;
+			camera.x +=speed;	//d
+			Vil[0].x -=speed;
+
+			saveVil();
+			moveVilX-=speed;
+
 			sidemove = "right";
 			moveframes()
 			frposy = 64;
         }else
         if(wPessed){
-            // Hero.y -=speed;  //w
-			camera.y -=speed;
+			camera.y -=speed;  //w
+			Vil[0].y +=speed;
+
+			saveVil();
+			moveVilY+=speed;
+
 			sidemove = "up";
 			moveframes()
 			frposy = 96;
         }else
         if(sPessed){
-           // Hero.y +=speed; //s
-			camera.y +=speed;
+			camera.y +=speed;	 //s
+			Vil[0].y -=speed;
+
+			saveVil();
+			moveVilY-=speed;
+
 			sidemove = "down";
 			moveframes()
 			frposy = 0;
@@ -87,11 +97,23 @@ function Move(){
 		//Коллизия персонажа
 		coll_Char();
      	//Коллизия границ
-     	//coll_Cam();
+     	coll_Cam();
     }
 
-
-
+// function VilMove(){
+//  		if(aPessed){
+// 			Vil[0].x +=speed;
+// 		}else
+//         if(dPessed){
+// 			Vil[0].x -=speed;
+//         }else
+//         if(wPessed){ 
+// 			Vil[0].y +=speed;
+//         }else
+//         if(sPessed){
+// 			Vil[0].y -=speed;
+//         }
+// }
 
 
 

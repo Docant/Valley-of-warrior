@@ -11,12 +11,14 @@ function draw() {
         renderMap();
         //Объекты
         renderBuilds();
-        //Таверна
-        renderTaverna();
         //Отрисовка персонажа
         ctx.drawImage(Hero.img, 27 * nframe, frposy, Hero.wid, Hero.hei, Hero.x, Hero.y, Hero.w, Hero.h);
-        //Атака
+        //Меч
         attacka();
+
+        drawVil();
+        moveVil();
+
     }
 }
 

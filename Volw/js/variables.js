@@ -42,7 +42,7 @@ var angle = 0;
 var swd = document.getElementById("sword1");
 
 //------------------Скорость------------------
-var speed = 10;
+var speed = 4;
 //------------------Герой------------------
 var heroImg = document.getElementById("Hero1");
 var Hero = {x: x/2, y: y/2, w: 41, h: 48, img: heroImg, wid:27, hei:32};
@@ -73,21 +73,6 @@ var medium_home =[];
 var big_home =[];
 
 var cave =[];
-
-//-----------------Взаимодействие с окружением-----------------
-
-var interact = false;
-
-//------------------Тип локации------------------
-
-var inBuilding = false;
-
-
-var typeBackground = "ground";
-
-var typeObjectsMap = 'streetObjects';
-
-
 
 
 

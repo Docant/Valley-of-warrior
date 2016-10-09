@@ -63,16 +63,6 @@ var tiles = {
     37: [448, 192],
     38: [512, 192],
     39: [576, 192],
-    40: [0, 256],
-    41: [64, 256],
-    42: [128, 256],
-    43: [192, 256],
-    44: [256, 256],
-    45: [320, 256],
-    46: [384, 256],
-    47: [448, 256],
-    48: [512, 256],
-    49: [576, 256],
 };
 
 // Отрисовка карты в цикле по тайлмапе
@@ -85,29 +75,16 @@ function renderMap(){
         }
     }
 }
-// Отрисовка объектов на карте
 function renderBuilds(){
-    for (var i=1,l=streetObjects.length; i<l; i++) {
+    for (var i=1,l=floor.length; i<l; i++) {
         var posY = (64 * i)-camera.y;
-        for (var j=1,jl=streetObjects[i].length; j<jl; j++) {
+        for (var j=1,jl=floor[i].length; j<jl; j++) {
             var posX = (64 * j)-camera.x;
-            ctx.drawImage(tilesBCG, tiles[streetObjects[i][j]][0], tiles[streetObjects[i][j]][1], tileSize, tileSize, posX, posY, tileSize, tileSize);
+            ctx.drawImage(tilesBCG, tiles[floor[i][j]][0], tiles[floor[i][j]][1], tileSize, tileSize, posX, posY, tileSize, tileSize);
             coll_Char(posX,posY,tileSize,i,j);
         }
     }
 }
-// Отрисовка таверна
-function renderTaverna(){
-    for (var i=0,l=taverna.length; i<l; i++) {
-        var posY = (64 * i)-950-camera.y;
-        for (var j=0,jl=taverna[i].length; j<jl; j++) {
-            var posX = (64 * j)-1550-camera.x;
-            ctx.drawImage(tilesBCG, tiles[taverna[i][j]][0], tiles[taverna[i][j]][1], tileSize, tileSize, posX, posY, tileSize, tileSize);
-            taverna_coll_Char(posX,posY,tileSize,i,j);
-        }
-    }
-}
-
 
 
 
