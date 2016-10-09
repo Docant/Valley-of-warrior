@@ -16,9 +16,9 @@ function draw() {
         //Меч
         attacka();
 
-        //ctx.fillRect(NPC[0].x,NPC[0].y,NPC[0].w,NPC[0].h);
         drawVil();
         moveVil();
+
     }
 }
 
