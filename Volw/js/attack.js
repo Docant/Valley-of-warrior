@@ -8,7 +8,7 @@ window.onmousemove = function(event){   //положение мыши
 
 //--------Центр героя--------
 var sx = Hero.x + Hero.w/2;
-var sy = Hero.y +10+ Hero.h/2;
+var sy = Hero.y + Hero.h/2;
 
 onclick = function(){   //клик мыши
         attack = true;
@@ -30,9 +30,9 @@ canvas.oncontextmenu = function(e) {
 // ctx.onmousedown = function(e){ //Нажал
      
 // };
-// 
+ 
 // ctx.onmouseup = function(){  //Отпустил
-// 
+ 
 // };
 
 function sword(sx,sy,widsw,heisw,a){
