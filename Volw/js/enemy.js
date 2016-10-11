@@ -21,7 +21,6 @@ var moveVilY = VilY+Math.floor(Math.random() * (max - min + 1)) + min; // коо
 function newRand(){     //новый рандом для новой координаты движения
     randVilX = Math.floor(Math.random() * (max - min + 1)) + min; //рандом кординаты Х
     randVilY = Math.floor(Math.random() * (max - min + 1)) + min; //рандом кординаты У
-    alert("bob");
 }
 
 function saveVil(){ //сохранение координат после окончания движения
@@ -52,7 +51,7 @@ function moveVil(){  // перемещение поселенца
             Vil[0].y-=1;
             saveVil();      //сохранение координат после окончания движения
         }else{
-            setinterval(newRand(),2000); 
+            setInterval(newRand(),2000); 
             saveMoveVil();  //новые координаты к которым нужно двигаться
         }
     }

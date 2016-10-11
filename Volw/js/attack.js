@@ -36,23 +36,69 @@ canvas.oncontextmenu = function(e) {
 // };
 
 function sword(sx,sy,widsw,heisw,a){
-    var dx = sx;  
-    var dy = sy;
-
-    angle = Math.atan2(cursory-cy-70,cursorx-cx-30);
+    angle = Math.atan2(cursory-cy-90,cursorx-cx-95);
 
     if(angle){
         ctx.save();
-        ctx.translate(dx,dy);
+        ctx.translate(sx,sy);
         ctx.rotate(angle);
-        ctx.translate(-dx,-dy);
+        ctx.translate(-sx,-sy);
     }
-    if(weaponry){ctx.drawImage(swd, sx,sy,widsw,heisw);}
+    if(weaponry){ctx.drawImage(swd, sx-5,sy-10,widsw,heisw);}
     if(angle){
         ctx.restore();
     }
 
 };
+
+
+
+	    function lineTo(sx, sy, cursorx, cursory, red) {  // линия к курсору
+          ctx.beginPath();
+          ctx.strokeStyle = red;
+          ctx.moveTo(sx, sy);
+          ctx.lineTo(cursorx, cursory);
+          ctx.stroke();
+      };
+
+	  //-----------------дальняя-атака-------------
+
+
+
+
+var Arrow = [     //массив стрел
+{x: sx, y: sy,flyX: 800, flyY: 800, w: 10, h:10}, 
+{x: 0, y: 0}, 
+];
+
+function drawArrow(){         //отрисовка стрелы
+    ctx.fillRect(Arrow[0].x,Arrow[0].y,Arrow[0].w,Arrow[0].h);     
+}
+
+
+function moveArrow(){  // перемещение поселенца
+    if(true){
+        if(Arrow[0].flyX>Arrow[0].x){
+            Arrow[0].x+=10;
+            saveVil();      //сохранение координат после окончания движения
+        }
+        if(Arrow[0].flyX<Arrow[0].x){
+            Arrow[0].x-=10;
+            saveVil();      //сохранение координат после окончания движения
+        }
+         if(Arrow[0].flyY>Arrow[0].y){
+            Arrow[0].y+=10;
+            saveVil();      //сохранение координат после окончания движения
+        }
+        if(Arrow[0].flyY<Arrow[0].y){
+            Arrow[0].y-=10;
+            saveVil();      //сохранение координат после окончания движения
+        }
+   
+    }
+}
+
+
 
 
 
