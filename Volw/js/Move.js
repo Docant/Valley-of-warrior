@@ -3,7 +3,7 @@
     document.addEventListener("keydown", keyDownHandler, false); 
 	document.addEventListener("keyup", keyUpHandler, false);
 
-	function keyDownHandler(e) {   //Уравление кнопками
+	function keyDownHandler(e) {   //Уравление кнопками 
 		//alert(e.keyCode);
 		if(e.keyCode == 65) {
 			aPessed = true;     //a
@@ -62,6 +62,8 @@ function Move(){
 			Vil[0].x +=speed;
 			saveVil();
 			moveVilX+=speed;
+			
+			Arrow[0].x+=speed;
 		}else
         if(dPessed){
             // Hero.x +=speed; //d
@@ -73,6 +75,8 @@ function Move(){
 			Vil[0].x -=speed;
 			saveVil();
 			moveVilX-=speed;
+			
+			Arrow[0].x-=speed;
         }else
         if(wPessed){
             // Hero.y -=speed;  //w
@@ -84,6 +88,8 @@ function Move(){
 			Vil[0].y +=speed;
 			saveVil();
 			moveVilY+=speed;
+			
+			Arrow[0].y+=speed;
         }else
         if(sPessed){
            // Hero.y +=speed; //s
@@ -95,7 +101,10 @@ function Move(){
 			Vil[0].y -=speed;
 			saveVil();
 			moveVilY-=speed;
+
+			Arrow[0].y-=speed;
         }
+		
 		// if(!wPessed && !sPessed && !aPessed && !dPessed){
 		// 	frposy = 130;
 		// 	camera.y +=0;

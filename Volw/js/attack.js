@@ -36,7 +36,7 @@ canvas.oncontextmenu = function(e) {
 // };
 
 function sword(sx,sy,widsw,heisw,a){
-    angle = Math.atan2(cursory-cy-90,cursorx-cx-95);
+    angle = Math.atan2(cursory-cy-100,cursorx-cx-110);
 
     if(angle){
         ctx.save();
@@ -61,13 +61,13 @@ function sword(sx,sy,widsw,heisw,a){
           ctx.stroke();
       };
 
-	  //-----------------дальняя-атака-------------
+//-----------------дальняя-атака-------------
 
 
 
 
 var Arrow = [     //массив стрел
-{x: sx, y: sy,flyX: 800, flyY: 800, w: 10, h:10}, 
+{x: sx, y: sy, w: 20, h:5, range: 400}, 
 {x: 0, y: 0}, 
 ];
 
@@ -76,26 +76,10 @@ function drawArrow(){         //отрисовка стрелы
 }
 
 
-function moveArrow(){  // перемещение поселенца
-    if(true){
-        if(Arrow[0].flyX>Arrow[0].x){
-            Arrow[0].x+=10;
-            saveVil();      //сохранение координат после окончания движения
-        }
-        if(Arrow[0].flyX<Arrow[0].x){
-            Arrow[0].x-=10;
-            saveVil();      //сохранение координат после окончания движения
-        }
-         if(Arrow[0].flyY>Arrow[0].y){
-            Arrow[0].y+=10;
-            saveVil();      //сохранение координат после окончания движения
-        }
-        if(Arrow[0].flyY<Arrow[0].y){
-            Arrow[0].y-=10;
-            saveVil();      //сохранение координат после окончания движения
-        }
-   
-    }
+function moveArrow(){  // перемещение стрелы
+	if(Arrow[0].x <= sx+Arrow[0].range){
+		Arrow[0].x+=15;
+	}
 }
 
 
