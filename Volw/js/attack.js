@@ -8,7 +8,7 @@ window.onmousemove = function(event){   //положение мыши
 
 //--------Центр героя--------
 var sx = Hero.x + Hero.w/2;
-var sy = Hero.y + Hero.h/2;
+var sy = Hero.y + Hero.h/2 +12;
 
 onclick = function(){   //клик мыши
         attack = true;
@@ -17,9 +17,9 @@ onclick = function(){   //клик мыши
 
 function attacka(){
     if(attack){
-        sword(sx+5, sy+6, 100, 40, angle);
+        sword(sx, sy, 100, 40, angle);
     }else{
-        sword(sx+10, sy+11, 50, 20, angle);
+        sword(sx, sy, 50, 20, angle);
     }
 }
 
