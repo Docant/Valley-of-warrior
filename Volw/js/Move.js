@@ -54,27 +54,37 @@ function moveframes(){
 function Move(){
         if(aPessed){
             // Hero.x -=speed; //a
+			
 			camera.x -=speed;
 			sidemove = "left";
 			moveframes()
 			frposy = 32;
-
-			Vil[0].x +=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].x +=speed;
+			}
 			saveVil();
-			moveVilX+=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].moveVilX+=speed;
+			}
 			
 			Arrow[0].x+=speed;
+			
 		}else
         if(dPessed){
             // Hero.x +=speed; //d
+			
 			camera.x +=speed;
 			sidemove = "right";
 			moveframes()
 			frposy = 64;
 						
-			Vil[0].x -=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].x -=speed;
+			}
 			saveVil();
-			moveVilX-=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].moveVilX-=speed;
+			}
 			
 			Arrow[0].x-=speed;
         }else
@@ -85,9 +95,13 @@ function Move(){
 			moveframes()
 			frposy = 96;
 						
-			Vil[0].y +=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].y +=speed;
+			}
 			saveVil();
-			moveVilY+=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].moveVilY+=speed;
+			}
 			
 			Arrow[0].y+=speed;
         }else
@@ -98,9 +112,13 @@ function Move(){
 			moveframes()
 			frposy = 0;
 		
-			Vil[0].y -=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].y -=speed;
+			}
 			saveVil();
-			moveVilY-=speed;
+			for(var i=0;i<Vil.length;i++){
+				Vil[i].moveVilX-=speed;
+			}
 
 			Arrow[0].y-=speed;
         }

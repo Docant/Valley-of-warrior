@@ -11,8 +11,8 @@ function push(pforce){
 			if(sidemove == "down"){
 			  //Отталкивание вверх
 			  camera.y -=speed/pforce;
-			
-			} if(sidemove == "up"){
+			}	
+			  if(sidemove == "up"){
 			  //Отталкиваение вниз
 			  camera.y +=speed/pforce;
 			}
@@ -71,8 +71,12 @@ function coll_Cam(){
 			camera.y = 64-y/2;
 		}
 }
+//-----------------------Коллизия моба-----------------------
 
+function coll_NPC(){
 
+	
+}
 
 
 

@@ -23,8 +23,8 @@ function draw() {
         moveVil();
 		//линия к курсору мыши
 		//lineTo(sx, sy, cursorx-90, cursory-85);
-		drawArrow();
-		moveArrow();
+		//drawArrow();
+		//moveArrow();
 
     }
 }

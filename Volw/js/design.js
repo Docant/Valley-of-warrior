@@ -36,40 +36,37 @@ function screenDeb(j,i){
 
 function newGame(){
 	pause = false;
-	document.getElementById("CVS").style.display = "block";
-	document.getElementById("main_menu").style.display = "none";
+	$("#CVS").show();
+	$("#main_menu").hide();
 	camera = {x: 0, y: 0};
 }
 
 function newGameMenu(){
 		if(inGame){
-		document.getElementById("NewGame").style.display = "none";
-		document.getElementById("Continue").style.display = "none";
-		document.getElementById("Exit").style.display = "none";
-		document.getElementById("BacktoGame").style.display = "block";
-		document.getElementById("Exittomenu").style.display = "block";
+		$("#Exit, #Continue, #NewGame").hide();
+		$("#BacktoGame, #Exittomenu").show();
 	}else{
-		document.getElementById("NewGame").style.display = "block";
-		document.getElementById("Continue").style.display = "block";
-		document.getElementById("Exit").style.display = "block";
-		document.getElementById("BacktoGame").style.display = "none";
-		document.getElementById("Exittomenu").style.display = "none";
+		$("#NewGame, #Continue, #Exit").show();
+		$("#BacktoGame, #Exittomenu").hide();
 	}
 }
 
 function GamePause(){
 	if(!pause){
 		pause = true;
-		document.getElementById("CVS").style.display = "none";
-		document.getElementById("main_menu").style.display = "block";
+		$("#CVS").hide();
+		$("#main_menu").show();
 	}else if(pause){
 		pause = false;
-		document.getElementById("CVS").style.display = "block";
-		document.getElementById("main_menu").style.display = "none";
+		$("#CVS").show();
+		$("#main_menu").hide();
 	}
 }
 
 function options(){
+
+}
+function saves(){
 
 }
 
@@ -89,11 +86,14 @@ function GameMenu(buttnum){
 		case 3: //Continue
 		break;
 		case 4: //Saves
+		
+		if(!saves){saves = true;$("#saves").show();}
+		else if(saves){saves = false;$("#saves").hide();}
 		break;
 		case 5: //Options
 		
-		if(!optios){optios = true;document.getElementById("options").style.display = 'block';}
-		else if(optios){optios = false;document.getElementById("options").style.display = 'none';}
+		if(!optios){optios = true;$("#options").show();}
+		else if(optios){optios = false;$("#options").hide();}
 		break;
 		case 6: //Save and Quit to menu
 		pause = true;

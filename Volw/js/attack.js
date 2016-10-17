@@ -36,7 +36,7 @@ canvas.oncontextmenu = function(e) {
 // };
 
 function sword(sx,sy,widsw,heisw,a){
-    angle = Math.atan2(cursory-cy-100,cursorx-cx-110);
+    angle = Math.atan2(cursory-cy-112,cursorx-cx-52);
 
     if(angle){
         ctx.save();
