@@ -64,10 +64,14 @@ function GamePause(){
 }
 
 function options(){
-
+	if(savs){savs = false;$("#saves").hide();}
+	if(!optios){optios = true;$("#options").show();}
+		else if(optios){optios = false;$("#options").hide();}
 }
 function saves(){
-
+	if(optios){optios = false;$("#options").hide();}
+	if(!savs){savs = true;$("#saves").show();}
+		else if(savs){savs = false;$("#saves").hide();}
 }
 
 function GameMenu(buttnum){
@@ -86,14 +90,10 @@ function GameMenu(buttnum){
 		case 3: //Continue
 		break;
 		case 4: //Saves
-		
-		if(!saves){saves = true;$("#saves").show();}
-		else if(saves){saves = false;$("#saves").hide();}
+		saves();
 		break;
 		case 5: //Options
-		
-		if(!optios){optios = true;$("#options").show();}
-		else if(optios){optios = false;$("#options").hide();}
+		options();
 		break;
 		case 6: //Save and Quit to menu
 		pause = true;

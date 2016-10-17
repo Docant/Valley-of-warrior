@@ -24,6 +24,8 @@ var debug = false;
 
 var optios = false;
 
+var savs = false;
+
 //-----------Переменные перемещения героя-----------
 var wPessed = false;  
 var sPessed = false;
@@ -41,17 +43,21 @@ var angle = 0;
 
 var swd = document.getElementById("sword1");
 
-//------------------Скорость------------------
+//------------------Скорости------------------
+//Скорость персонажа
 var speed = 10;
+//Скорость моба
+var speedMob = 1;
 //------------------Герой------------------
 var heroImg = document.getElementById("Hero1");
 var Hero = {x: x/2, y: y/2, w: 41, h: 48, img: heroImg, wid:27, hei:32};
 
 var nframe = 1;
 var frposy = 0;
-
+//Сторона зрения персонажа
 var sidemove = "down";
-
+//Сторона зрения моба
+var sidemoveenemy = "right";
 //---------------Камера---------------------------
 var camera = {x: 0, y: 0};
 
@@ -65,27 +71,23 @@ var tileSize = 64;
 
 //2240 Размер карты
 var mapsize = 64*50;
-
+//Малый дом
 var small_home =[];
-
+//Средний дом
 var medium_home =[];
-
+//Большой дом
 var big_home =[];
-
+//Пещера
 var cave =[];
 
 //-----------------Взаимодействие с окружением-----------------
-
+//Взаимодействие
 var interact = false;
 
 //------------------Тип локации------------------
-
+//"В здании"
 var inBuilding = false;
 
-
-var typeBackground = "ground";
-
-var typeObjectsMap = 'streetObjects';
 
 
 

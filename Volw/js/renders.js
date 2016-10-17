@@ -87,9 +87,9 @@ function renderMap(){
 }
 // Отрисовка объектов на карте
 function renderBuilds(){
-    for (var i=1,l=streetObjects.length; i<l; i++) {
+    for (var i=0,l=streetObjects.length; i<l; i++) {
         var posY = (64 * i)-camera.y;
-        for (var j=1,jl=streetObjects[i].length; j<jl; j++) {
+        for (var j=0,jl=streetObjects[i].length; j<jl; j++) {
             var posX = (64 * j)-camera.x;
             ctx.drawImage(tilesBCG, tiles[streetObjects[i][j]][0], tiles[streetObjects[i][j]][1], tileSize, tileSize, posX, posY, tileSize, tileSize);
             coll_Char(posX,posY,tileSize,i,j);

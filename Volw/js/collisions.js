@@ -11,8 +11,8 @@ function push(pforce){
 			if(sidemove == "down"){
 			  //Отталкивание вверх
 			  camera.y -=speed/pforce;
-			}	
-			  if(sidemove == "up"){
+			
+			} if(sidemove == "up"){
 			  //Отталкиваение вниз
 			  camera.y +=speed/pforce;
 			}
@@ -71,11 +71,34 @@ function coll_Cam(){
 			camera.y = 64-y/2;
 		}
 }
-//-----------------------Коллизия моба-----------------------
 
-function coll_NPC(){
+//Коллизия моба
+function coll_enemies(posX,posY,tSize, i,j){
 
-	
+	var CollX = false;
+	var CollY = false;
+  		if ((Vil[0].x + Vil[0].w >= posX) && (Vil[0].x <= Vil[0] + tSize)){CollX = true;}
+  		if ((Vil[0].y + Vil[0].h >= posY) && (Vil[0].y <= Vil[0] + tSize)){CollY = true;}  
+
+  		if (CollX && CollY){
+		  	if(streetObjects[i][j] != 0 && streetObjects[i][j] != 48){
+					if(sidemoveenemy == "right"){
+			  		//Отталкиваение влево
+			  		Vil[0].x -=speedMob;
+					}if(sidemoveenemy == "left"){
+						//Отталкиваение вправо
+					  Vil[0].x +=speedMob;
+					}
+					if(sidemoveenemy == "down"){
+					  //Отталкивание вверх
+					  Vil[0].y -=speedMob;
+					
+					} if(sidemoveenemy == "up"){
+					  //Отталкиваение вниз
+					  Vil[0].y +=speedMob;
+					}
+		  	}
+		}
 }
 
 

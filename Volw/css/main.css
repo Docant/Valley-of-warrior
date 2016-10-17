@@ -112,14 +112,14 @@ body{
 
 #saves button{
     display: block;
-    width: 90%;
-    height: 50px;
+    width: 95%;
+    height: 75px;
     text-align: left;
     padding-left: 25px;
     border: 4px solid #D4B2AE;
     background-color: #3C3C63;
     color: #D4B2AE;
-    margin: 1%;
+    margin: 2% auto 0;
 }
 
 #saves button:hover{

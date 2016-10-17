@@ -3,45 +3,49 @@
     document.addEventListener("keydown", keyDownHandler, false); 
 	document.addEventListener("keyup", keyUpHandler, false);
 
-	function keyDownHandler(e) {   //Уравление кнопками 
+	function keyDownHandler(e) {   //Уравление кнопками
 		//alert(e.keyCode);
-		if(e.keyCode == 65) {
+		switch(e.keyCode){
+			case 65:
 			aPessed = true;     //a
-		}
-		if(e.keyCode == 68) {
+			break;
+			case 68:
 			dPessed = true;     //d
-		}
-        if(e.keyCode == 87) {
+			break;
+			case 87:
 			wPessed = true;     //w
-		}
-		if(e.keyCode == 83) {
+			break;
+			case 83:
 			sPessed = true;     //s
-		}
-		if(e.keyCode == 192){
+			break;
+			case 192:
 			if(!debug){debug = true;}else if(debug){debug = false;}
-		}
-		if(e.keyCode == 27 && inGame){
+			break;
+			case 27:
 			GameMenu(0);
-		}
-		if(e.keyCode == 69){
+			break;
+			case 69:
 			interact = true;
+			break;
 		}
 	}
 	function keyUpHandler(e) {	 //Уравление кнопками
-		if(e.keyCode == 65) {
+		switch(e.keyCode){
+			case 65:
 			aPessed = false;    //a
-		}
-		if(e.keyCode == 68) {
+			break;
+			case 68:
 			dPessed = false;    //d
-		}
-        if(e.keyCode == 87) {
+			break;
+			case 87:
 			wPessed = false;    //w
-		}
-		if(e.keyCode == 83) {
+			break;
+			case 83:
 			sPessed = false;    //s
-		}
-		if(e.keyCode == 69){
+			break;
+			case 69:
 			interact = false;
+			break;
 		}
 	}   
 
@@ -54,39 +58,21 @@ function moveframes(){
 function Move(){
         if(aPessed){
             // Hero.x -=speed; //a
-			
 			camera.x -=speed;
 			sidemove = "left";
 			moveframes()
 			frposy = 32;
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].x +=speed;
-			}
-			saveVil();
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].moveVilX+=speed;
-			}
-			
-			Arrow[0].x+=speed;
-			
+
+			Vil[0].x +=speed;
 		}else
         if(dPessed){
             // Hero.x +=speed; //d
-			
 			camera.x +=speed;
 			sidemove = "right";
 			moveframes()
 			frposy = 64;
 						
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].x -=speed;
-			}
-			saveVil();
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].moveVilX-=speed;
-			}
-			
-			Arrow[0].x-=speed;
+			Vil[0].x -=speed;
         }else
         if(wPessed){
             // Hero.y -=speed;  //w
@@ -95,15 +81,7 @@ function Move(){
 			moveframes()
 			frposy = 96;
 						
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].y +=speed;
-			}
-			saveVil();
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].moveVilY+=speed;
-			}
-			
-			Arrow[0].y+=speed;
+			Vil[0].y +=speed;
         }else
         if(sPessed){
            // Hero.y +=speed; //s
@@ -112,25 +90,14 @@ function Move(){
 			moveframes()
 			frposy = 0;
 		
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].y -=speed;
-			}
-			saveVil();
-			for(var i=0;i<Vil.length;i++){
-				Vil[i].moveVilX-=speed;
-			}
-
-			Arrow[0].y-=speed;
+			Vil[0].y -=speed;
         }
-		
 		// if(!wPessed && !sPessed && !aPessed && !dPessed){
 		// 	frposy = 130;
 		// 	camera.y +=0;
 		// }
 		//Коллизия персонажа
 		coll_Char();
-     	//Коллизия границ
-     	coll_Cam();
     }
 
 
